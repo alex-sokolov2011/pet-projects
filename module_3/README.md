@@ -7,8 +7,10 @@
 [1. Описание модуля](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Описание-модуля)  
 [2. Какой кейс решаем?](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Какой-кейс-решаем?)  
 [3. Краткая информация о данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Краткая-информация-о-данных)  
-[3. Этапы работы над проектом](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Этапы-работы-над-проектом)  
-[4. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Результат)  
+[4. Полное описание задания с kaggle](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Полное-описание-задания-с-kaggle)  
+[5. Шаблон ноутбука с параметрами модели](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Шаблон-ноутбука-с-параметрами-модели)  
+[6. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Результат)  
+
 
 ### Описание модуля  
 Что вы получите в результате работы?  
@@ -31,10 +33,23 @@
 
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Оглавление)
 
-### Этапы работы над проектом  
-`данный раздел находится в разработке`  
+### Полное описание задания с kaggle  
+В этом соревновании вам будет предложен датасет, содержащий сведения о ресторанах. С помощью имеющего в вашем распоряжении кода, вам необходимо создать модель, использующую алгоритм RandomForestRegression, которая будет прогнозировать рейтинг ресторана по версии TripAdvidor.  
+Для победы в конкурсе вам необходимо качественно очистить датасет, подобрать подходящие значения для заполнения пропусков и создать новые признаки на основе той информации, которую вы сможете извлечь из имеющихся в вашем распоряжении данных.  
+Условия соревнования:  
+- Все участники должны использовать один и тот же алгоритм с параметрами, заданными по умолчанию.  
+- Разрешено использовать внешние данные.  
+- Решения буду проверяться преподавателями на их адекватность и воспроизводимость.  
+
+Во вкладке Notebooks этого соревнования для Вас доступно Базовое решение (Baseline)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Оглавление)
+
+### Шаблон ноутбука с параметрами модели  
+Базовое решение (Baseline) содержит настройки для модели (RandomForestRegression) == ```model = RandomForestRegressor(n_estimators=100, verbose=1, n_jobs=-1, random_state=RANDOM_SEED)```  
+Полностью ноутбук с базовым решением (Baseline) можно посмотреть [по ссылке](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/baseline_notebook).  
+
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Оглавление)
 
 ### Результат  
-`данный раздел находится в разработке`  
+```раздел находится в работе```  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Оглавление)
