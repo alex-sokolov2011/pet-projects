@@ -13,12 +13,7 @@
 ### О чем тут и про что  
 Эти пет-проекты были созданы в рамках программы обучения по специализации Data Science в SkillFactory.  
 На текущий момент проекты включают в себя следующий **стек**:  
-- Python  
-  - NumPy  
-  - Pandas  
-  - Matplotlib, Seaborn, Plotly  
-  - Scipy  
-  - Sklearn  
+- Python (NumPy, Pandas, Matplotlib, Seaborn, Plotly, Scipy, Sklearn)  
 - Kaggle
 - Git, GitHub  
 - Anaconda, Jupyter Notebook, VS Code  
