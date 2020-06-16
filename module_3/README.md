@@ -87,7 +87,7 @@
 
 
 ### Результат  
-- score - 0.16905
+- score - 0.16870
 - на 15.06.2020 6 место из 84 участников   
 - [ноутбук на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-restaurant-rating-prediction-sokolov/notebook)  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_3/README.md#Оглавление)
