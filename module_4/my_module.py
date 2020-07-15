@@ -69,7 +69,7 @@ def four_plot_with_log2(d_name_column,d_df):
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
     
-    temp_df=d_df
+    temp_df=d_df.copy()
 
     plt.subplot2grid((1, 4), (0, 0))
     temp_df[d_name_column].hist(bins=11)
@@ -79,12 +79,12 @@ def four_plot_with_log2(d_name_column,d_df):
     
     temp_name = 'log_'+d_name_column
 
-    d_df.loc[:,temp_name] = d_df[d_name_column].apply(lambda x: math.log(x+epsilon))
+    temp_df.loc[:,temp_name] =  temp_df[d_name_column].apply(lambda x: math.log(x+epsilon))
     plt.subplot2grid((1, 4), (0, 2))
     temp_df[temp_name].hist(bins=11)
 
     plt.subplot2grid((1, 4), (0, 3))
-    d_df.boxplot([temp_name])
+    temp_df.boxplot([temp_name])
     plt.show()
     return
 
@@ -185,7 +185,7 @@ def describe_without_plots(d_name_plot,d_df):
     return
 
 
-def describe_without_plots_all_collumns(d_df, full=True):
+def describe_without_plots_all_collumns(d_df, full=True, short=False):
     list_of_names = list(d_df.columns)
     temp_dict = {}
     temp_dict['имя критерия'] = list_of_names
@@ -193,9 +193,10 @@ def describe_without_plots_all_collumns(d_df, full=True):
     temp_dict['# значений'] = d_df.describe(include='all').loc['count']
     temp_dict['# пропусков(NaN)'] = d_df.isnull().sum().values 
     temp_dict['# уникальных'] = d_df.nunique().values
-    temp_dict['в первой строке'] =d_df.loc[0].values
-    temp_dict['во второй строке'] = d_df.loc[1].values
-    temp_dict['в третьей строке'] = d_df.loc[2].values
+    if not short:
+        temp_dict['в первой строке'] =d_df.loc[0].values
+        temp_dict['во второй строке'] = d_df.loc[1].values
+        temp_dict['в третьей строке'] = d_df.loc[2].values
     if full :
         temp_dict['минимум'] = d_df.describe(include='all').loc['min']
         temp_dict['среднее'] = d_df.describe(include='all').loc['mean']
