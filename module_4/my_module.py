@@ -104,7 +104,7 @@ def big_hist_log(d_name_column,d_df):
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
 
-    temp_df = d_df
+    temp_df = d_df.copy()
     temp_df['log_'+d_name_column] = temp_df[d_name_column].apply(lambda x: math.log(x+epsilon))
 
     temp_df['log_'+d_name_column].hist(bins=50)
