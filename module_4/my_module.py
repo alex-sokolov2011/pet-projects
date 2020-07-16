@@ -405,6 +405,22 @@ def group_plot_barv_mean(d_category_names,
     return
 
 
+def binned(df, col_name, bins_no=11):
+    # df - имя датафрейма, col_name - наименование признака, который надо разбить на интервалы, 
+    # bins - количество интервалов разбиения
+    # пример: data['age_binned'] = binned(data,'age',18)
+    
+    if not pd.api.types.is_numeric_dtype(df[col_name]):
+        print(f'Признак {col_name} не численный, разбиение невозможно')
+        return
+    else:
+        # Вычисляем минимум и максимум разбиения
+        bottom = df[col_name].min()
+        top = df[col_name].max()
+        # Возвращаем признак, разбитый на интервалы
+        return pd.cut(df[col_name], bins = np.linspace(bottom, top, num = bins_no))
+
+
 def simple_heatmap(d_title, d_df, d_list_of_columns, d_my_font_scale, d_g):
     """
     
