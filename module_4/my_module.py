@@ -404,6 +404,24 @@ def group_plot_barv_mean(d_category_names,
         
     return
 
+
+def simple_heatmap(d_title, d_df, d_list_of_columns, d_my_font_scale, d_g):
+    """
+    
+    """
+    temp_df = d_df[d_list_of_columns].copy()
+
+    plt.style.use('seaborn-paper')
+    plt.subplots(figsize=(6, 6))
+    color_text = plt.get_cmap('PuBu')(0.85)
+    sns.set(font_scale=d_my_font_scale, style='whitegrid')
+
+    plt.subplot(111)
+    h = sns.heatmap(temp_df.corr(), annot = True, fmt=f'.{d_g}g', cmap= "PuBu", center= 0)
+    h.set_title(d_title,  fontsize=14, color = color_text)
+
+    return
+
 def StandardScaler_FillNa_0(d_df):
     return
 
