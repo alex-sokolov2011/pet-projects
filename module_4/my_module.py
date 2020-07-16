@@ -323,7 +323,7 @@ def simple_boxplot(d_category_names,
             temp_df[d_name_column_group_y] = temp_df[d_name_column_group_y].apply(lambda x: math.log(x+epsilon))
         
         plt.style.use('seaborn-paper')
-        plt.subplots(figsize=(8, 4))
+        plt.subplots(figsize=(6, 4))
         color_text = plt.get_cmap('PuBu')(0.85)
 
         sns.set(font_scale=d_my_font_scale, style='whitegrid')
@@ -374,11 +374,34 @@ def plot_filter_df_kde(d_category_names,
     return
 
 
-def group_plot_barh_procent(d_name_title, d_category_names, d_name_column_group, d_name_column_base, d_df):
+def group_plot_barv_mean(d_category_names, 
+                         d_name_column_base_x, 
+                         d_name_column_group_y, 
+                         d_df,
+                         d_my_font_scale):
     """
     
     """
+    list_values = list(d_df[d_name_column_base_x].unique())
+    if len(d_category_names) != len(list_values):
+        return print('Кол-во категорий не совпадает с кол-вом значений')
+    else:
+        temp_df = d_df.copy()
+        plt.style.use('seaborn-paper')
+        plt.subplots(figsize=(6, 4))
+        color_text = plt.get_cmap('PuBu')(0.85)
+        sns.set(font_scale=d_my_font_scale, style='whitegrid')
 
+        plt.subplot(111)
+        b = sns.barplot(x=d_name_column_base_x, y=d_name_column_group_y, data=temp_df, palette="PuBu", ci=None, hue=d_name_column_base_x)
+
+        b.set_title(f'vplot распределения сред. знач. {d_name_column_group_y} сгруп-ные по {d_name_column_base_x}', 
+                    fontsize=12, color = color_text)
+        b.set_ylabel(d_name_column_group_y, fontsize=14, color = color_text)
+        b.set_xlabel(d_name_column_base_x, fontsize=14, color = color_text)
+
+        b.legend(labels=d_category_names, ncol=2, fancybox=True, framealpha=0.75, shadow=True, bbox_to_anchor=(0.5, -0.3), loc='center')
+        
     return
 
 def StandardScaler_FillNa_0(d_df):
