@@ -12,6 +12,20 @@ np.warnings.filterwarnings('ignore')
 
 import os
 
+def get_dummies_df(d_df, d_columns):
+    star_list_columns = list(d_df.columns)
+    # реализуем метод OneHotLabels через gummies
+    d_df = pd.get_dummies(d_df, columns=d_columns, drop_first=False)
+    # мы специально не удаляем первоначальные столбы, чтобы потом можно было провести построчную проверку перед стандартизацией и моделированием 
+    end_list_columns = list(d_df.columns)
+    new_dumm_cat_cols = [x for x in end_list_columns if x  not in star_list_columns]
+
+    temp_dict = {}
+    temp_dict['имя НОВОГО добавленного признака'] = new_dumm_cat_cols
+    temp_dict['тип признака'] = d_df[new_dumm_cat_cols].dtypes
+    temp_df = pd.DataFrame.from_dict(temp_dict, orient='index')
+    display(temp_df.T)
+    return new_dumm_cat_cols
 
 def scatterplot_with_hist(d_name_column_x, d_name_column_y, d_df):
     temp_df = d_df
@@ -188,7 +202,7 @@ def describe_without_plots(d_name_plot,d_df):
 def describe_without_plots_all_collumns(d_df, full=True, short=False):
     list_of_names = list(d_df.columns)
     temp_dict = {}
-    temp_dict['имя критерия'] = list_of_names
+    temp_dict['имя признака'] = list_of_names
     temp_dict['тип'] = d_df.dtypes
     temp_dict['# значений'] = d_df.describe(include='all').loc['count']
     temp_dict['# пропусков(NaN)'] = d_df.isnull().sum().values 
