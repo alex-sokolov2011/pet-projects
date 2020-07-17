@@ -5,8 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 from sklearn import metrics
+from sklearn.metrics import auc, roc_auc_score, roc_curve
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, balanced_accuracy_score, cohen_kappa_score
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -16,13 +17,15 @@ np.warnings.filterwarnings('ignore')
 import os
 
 
-def all_metrics(d_y_true, d_y_pred):
+def all_metrics(d_y_true, d_y_pred, d_y_pred_prob):
     temp_dict = {}
     temp_dict['accuracy'] = [accuracy_score(d_y_true, d_y_pred),'(TP+TN)/(P+N)']
+    temp_dict['balanced accuracy'] = [balanced_accuracy_score(d_y_true, d_y_pred),'сбалансированная accuracy']
     temp_dict['precision'] = [precision_score(d_y_true, d_y_pred),'точность = TP/(TP+FP)']
     temp_dict['recall'] = [recall_score(d_y_true, d_y_pred),'полнота = TP/P']
     temp_dict['f1_score'] = [f1_score(d_y_true, d_y_pred),'среднее гармоническое точности и полноты']
-
+    temp_dict['roc_auc'] = [roc_auc_score(d_y_true, d_y_pred_prob),'Area Under Curve - Receiver Operating Characteristic']    
+    
     temp_df = pd.DataFrame.from_dict(temp_dict, orient='index', columns=['Значение','Описание'])
     display(temp_df)
 
