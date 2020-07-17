@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import math
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 from sklearn import metrics
 import numpy as np
 import pandas as pd
@@ -11,6 +12,21 @@ from IPython.display import display
 np.warnings.filterwarnings('ignore')
 
 import os
+
+# функция для стандартизации
+def StandardScaler_column(d_df, d_col):
+    scaler = StandardScaler()
+    scaler.fit(d_df[[d_col]])
+    return scaler.transform(d_df[[d_col]])
+
+
+def StandardScaler_df_and_filna_0(d_df, d_columns):
+    # стандартизируем все столбцы кроме целевой и Sample
+    for i  in list(d_df[d_columns].columns):
+        d_df[i] = StandardScaler_column(d_df, i)
+        if len(d_df[d_df[i].isna()]) < len(d_df):
+            d_df[i] = d_df[i].fillna(0)
+    return
 
 def get_dummies_df(d_df, d_columns):
     star_list_columns = list(d_df.columns)
