@@ -16,30 +16,79 @@ np.warnings.filterwarnings('ignore')
 
 import os
 
+global last_pred
+
+
+def ROC_curve_with_area(d_y_true, d_y_pred_prob, d_my_font_scale):
+    roc_auc_score_f = roc_auc_score(d_y_true, d_y_pred_prob)
+
+    plt.style.use('seaborn-paper')
+    sns.set(font_scale=d_my_font_scale)
+    # sns.set_color_codes("muted")
+
+    plt.figure(figsize=(8, 6))
+    fpr, tpr, thresholds = roc_curve(d_y_true, d_y_pred_prob, pos_label=1)
+
+    plt.plot(fpr, tpr, lw=3, label='площадь под ROC кривой = %0.3f)' % roc_auc_score_f)
+    plt.plot([0, 1], [0, 1], color='grey')
+    plt.xlim([-.05, 1.0])
+    plt.ylim([-.05, 1.05])
+    plt.xlabel('Ложно классифицированные \n False Positive Rate (FPR)')
+    plt.ylabel('Верно классифицированные \n True Positive Rate (TPR)')
+    plt.title('ROC кривая')
+    plt.legend(loc="lower right")
+    plt.show()
+    return
+
+def test_last_pred(d_y_true, d_y_pred, d_y_pred_prob):
+    last_pred[0], last_pred[1], last_pred[2] = d_y_true, d_y_pred, d_y_pred_prob
+    return
 
 def all_metrics(d_y_true, d_y_pred, d_y_pred_prob):
+        
+    d_y_true_last, d_y_pred_last, d_y_pred_prob_last =  last_pred[0], last_pred[1], last_pred[2]
     temp_dict = {}
-    temp_dict['accuracy'] = [accuracy_score(d_y_true, d_y_pred),'(TP+TN)/(P+N)']
-    temp_dict['balanced accuracy'] = [balanced_accuracy_score(d_y_true, d_y_pred),'сбалансированная accuracy']
-    temp_dict['precision'] = [precision_score(d_y_true, d_y_pred),'точность = TP/(TP+FP)']
-    temp_dict['recall'] = [recall_score(d_y_true, d_y_pred),'полнота = TP/P']
-    temp_dict['f1_score'] = [f1_score(d_y_true, d_y_pred),'среднее гармоническое точности и полноты']
-    temp_dict['roc_auc'] = [roc_auc_score(d_y_true, d_y_pred_prob),'Area Under Curve - Receiver Operating Characteristic']    
+    temp1 = accuracy_score(d_y_true, d_y_pred)
+    temp2 = accuracy_score(d_y_true_last, d_y_pred_last)
+    temp_dict['accuracy'] = [temp1, temp2-temp1,'(TP+TN)/(P+N)']
+
+    temp1 = balanced_accuracy_score(d_y_true, d_y_pred)
+    temp2 = balanced_accuracy_score(d_y_true_last, d_y_pred_last)
+    temp_dict['balanced accuracy'] = [temp1, temp2-temp1,'сбалансированная accuracy']
     
-    temp_df = pd.DataFrame.from_dict(temp_dict, orient='index', columns=['Значение','Описание'])
+    temp1 = precision_score(d_y_true, d_y_pred)
+    temp2 = precision_score(d_y_true_last, d_y_pred_last)
+    temp_dict['precision'] = [temp1, temp2-temp1,'точность = TP/(TP+FP)']
+    
+    temp1 = recall_score(d_y_true, d_y_pred)
+    temp2 = recall_score(d_y_true_last, d_y_pred_last)
+    temp_dict['recall'] = [temp1, temp2-temp1,'полнота = TP/P']
+    
+    temp1 = f1_score(d_y_true, d_y_pred)
+    temp2 = f1_score(d_y_true_last, d_y_pred_last)
+    temp_dict['f1_score'] = [temp1, temp2-temp1,'среднее гармоническое точности и полноты']
+    
+    temp1 = roc_auc_score(d_y_true, d_y_pred_prob)
+    temp2 = roc_auc_score(d_y_true_last, d_y_pred_prob_last)
+    temp_dict['roc_auc'] = [temp1, temp2-temp1,'Area Under Curve - Receiver Operating Characteristic']    
+    
+    temp_df = pd.DataFrame.from_dict(temp_dict, orient='index', columns=['Значение','Дельта с предыдущим','Описание'])
     display(temp_df)
+
+    last_pred[0], last_pred[1], last_pred[2] = d_y_true, d_y_pred, d_y_pred_prob
 
     return
 
-def plot_confusion_matrix(y_true, y_pred, classes,
+def plot_confusion_matrix(y_true, y_pred, d_my_font_scale, classes,
                           normalize=False,
-                          title=None,
-                          cmap=plt.cm.Blues):
+                          title=None):
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
     """
+
     list_of_labels = [['TP','FP'],['FN','TN']]
+    
     if not title:
         if normalize:
             title = 'Нормализованная матрица ошибок'
@@ -62,6 +111,9 @@ def plot_confusion_matrix(y_true, y_pred, classes,
     print(cm)
 
     plt.style.use('seaborn-paper')
+    cmap=plt.cm.Blues
+    color_text = plt.get_cmap('PuBu')(0.85)
+
     fig, ax = plt.subplots()
     im = ax.imshow(cm, interpolation='nearest', cmap=cmap)
     ax.figure.colorbar(im, ax=ax)
@@ -70,10 +122,13 @@ def plot_confusion_matrix(y_true, y_pred, classes,
     ax.set(xticks=np.arange(cm.shape[1]),
            yticks=np.arange(cm.shape[0]),
            # ... and label them with the respective list entries
-           xticklabels=classes, yticklabels=classes,
-           title=title,
-           ylabel='Предсказанные значения',
-           xlabel='Целевая переменная')
+           
+           title=title)
+    ax.title.set_fontsize(15)
+    ax.set_ylabel('Предсказанные значения', fontsize=14, color = color_text)
+    ax.set_xlabel('Целевая переменная', fontsize=14, color = color_text)
+    ax.set_xticklabels(classes, fontsize=12, color = 'black')
+    ax.set_yticklabels(classes, fontsize=12, color = 'black')
 
     # Rotate the tick labels and set their alignment.
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
@@ -92,16 +147,16 @@ def plot_confusion_matrix(y_true, y_pred, classes,
 
 
 
-def confusion_matrix_f(d_name_columns, d_y, d_y_pred, normalize=False):
+def confusion_matrix_f(d_name_columns, d_y, d_y_pred, d_my_font_scale, normalize=False):
 
     class_names  = np.array(d_name_columns, dtype = 'U10')
     # Plot non-normalized confusion matrix
-    plot_confusion_matrix(d_y, d_y_pred, classes=class_names,
+    plot_confusion_matrix(d_y, d_y_pred, d_my_font_scale, classes=class_names,
                         title='Матрица ошибок без нормализации')
 
     # Plot normalized confusion matrix
     if normalize:
-        plot_confusion_matrix(d_y, d_y_pred, classes=class_names, normalize=True,
+        plot_confusion_matrix(d_y, d_y_pred, d_my_font_scale, classes=class_names, normalize=True,
                         title='Нормализованная матрица ошибок')
 
     plt.show()
