@@ -104,11 +104,7 @@ def plot_confusion_matrix(y_true, y_pred, d_my_font_scale, classes,
     # classes = classes[unique_labels(y_true, y_pred)]
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        print("Нормализованная матрица ошибок")
-    else:
-        print('Матрица ошибок без нормализации')
-
-    print(cm)
+   
 
     plt.style.use('seaborn-paper')
     cmap=plt.cm.Blues
