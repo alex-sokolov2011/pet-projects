@@ -8,6 +8,8 @@ from sklearn import metrics
 from sklearn.metrics import auc, roc_auc_score, roc_curve
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import confusion_matrix, balanced_accuracy_score, cohen_kappa_score
+from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import plot_precision_recall_curve
 from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
 import numpy as np
@@ -75,6 +77,28 @@ def where_1_in_corr(d_df, d_y):
         result.append(drop_list_columns[i][0])
     result= [x for x in result if x not in [d_y]]
     return result
+
+
+def PR_curve_with_area(d_y_true, d_y_pred_prob, d_my_font_scale):
+    
+
+    plt.style.use('seaborn-paper')
+    sns.set(font_scale=d_my_font_scale)
+    # sns.set_color_codes("muted")
+
+    plt.figure(figsize=(8, 6))
+    precision, recall, thresholds = precision_recall_curve(d_y_true, d_y_pred_prob, pos_label=1)
+    prc_auc_score_f = auc(recall, precision)
+    plt.plot(precision, recall, lw=3, label='площадь под PR кривой = %0.3f)' % prc_auc_score_f)
+    plt.plot([0, 1], [0, 1], color='grey')
+    plt.xlim([-.05, 1.0])
+    plt.ylim([-.05, 1.05])
+    plt.xlabel('Точность \n Precision = TP/(TP+FP)')
+    plt.ylabel('Полнота \n Recall = TP/P')
+    plt.title('Precision-Recall кривая')
+    plt.legend(loc="lower right")
+    plt.show()
+    return
 
 
 def ROC_curve_with_area(d_y_true, d_y_pred_prob, d_my_font_scale):
@@ -401,7 +425,7 @@ def describe_with_hist(d_name_plot,d_df):
 
 
 def describe_without_plots(d_name_plot,d_df):
-    temp_describe = d_df.describe()
+    temp_describe = d_df.describe().copy()
     temp_dict = {}
     temp_dict['кол-во строк'] = len(d_df)
     temp_dict['тип значений'] = d_df.dtype
