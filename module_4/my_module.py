@@ -662,14 +662,14 @@ def group_plot_barv_mean(d_category_names,
     return
 
 
-def simple_heatmap(d_title, d_df, d_list_of_columns, d_my_font_scale, d_g):
+def simple_heatmap(d_title, d_df, d_list_of_columns, d_my_font_scale, d_g, d_size):
     """
     
     """
     temp_df = d_df[d_list_of_columns].copy()
 
     plt.style.use('seaborn-paper')
-    plt.subplots(figsize=(6, 6))
+    plt.subplots(figsize=(d_size, 6))
     color_text = plt.get_cmap('PuBu')(0.85)
     sns.set(font_scale=d_my_font_scale, style='whitegrid')
 
