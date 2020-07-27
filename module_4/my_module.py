@@ -8,6 +8,8 @@ from sklearn import metrics
 from sklearn.metrics import auc, roc_auc_score, roc_curve
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import confusion_matrix, balanced_accuracy_score, cohen_kappa_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LogisticRegression
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -17,6 +19,61 @@ np.warnings.filterwarnings('ignore')
 import os
 
 global last_pred
+
+
+def GridSearchCV_for_LogReg(d_X_train, d_y_train, d_values_for_C):
+    # Добавим типы регуляризации
+    penalty = ['l1', 'l2']
+
+    # Зададим ограничения для параметра регуляризации
+    C = np.array(d_values_for_C)
+
+    # Создадим гиперпараметры
+    hyperparameters = dict(C=C, penalty=penalty)
+
+    model = LogisticRegression(multi_class = 'ovr')
+    model.fit(d_X_train, d_y_train)
+
+    # Создаем сетку поиска с использованием 5-кратной перекрестной проверки
+    clf = GridSearchCV(model, hyperparameters, cv=5, verbose=0, scoring='f1')
+
+    best_model = clf.fit(d_X_train, d_y_train)
+
+    # View best hyperparameters
+    temp_dict = {}
+    temp_dict['Penalty'] = [best_model.best_estimator_.get_params()['penalty']]
+    temp_dict['C'] = [best_model.best_estimator_.get_params()['C']]
+    # temp_dict['Признак'] = [best_model.best_index_]
+    # temp_list = sorted(clf.cv_results_.keys())
+    # temp_dict['Кол-во'] = [len(temp_list)]
+    temp_df = pd.DataFrame.from_dict(temp_dict, orient='index', columns=['Лучшие'])
+    display(temp_df)
+
+    # temp_dict = {}
+    # temp_dict['Лучшие признаки'] = temp_list
+    # temp_df = pd.DataFrame.from_dict(temp_dict, orient='index')
+    # display(temp_df.T)
+
+
+    return
+
+
+
+def where_1_in_corr(d_df, d_y):
+
+    result = []
+    drop_list_columns = []
+    all_cols = list(d_df.columns)
+    for col in all_cols:
+        temp_list = d_df.index[d_df[col] == 1].tolist()
+        list1 = [x for x in temp_list if x not in [col]]
+        if list1 != []:
+            list1.append(col)
+            drop_list_columns.append(list1)
+    for i in range(len(drop_list_columns)//2):
+        result.append(drop_list_columns[i][0])
+    result= [x for x in result if x not in [d_y]]
+    return result
 
 
 def ROC_curve_with_area(d_y_true, d_y_pred_prob, d_my_font_scale):
