@@ -1,5 +1,5 @@
 # Проект 4. Компьютер говорит «Нет»
-## Юнит 4. Юнит 4. Основные алгоритмы машинного обучения. Часть I   
+## Юнит 4. Основные алгоритмы машинного обучения. Часть I   
 ### skillfactory_rds  
 ![https://img.shields.io/badge/Python-3.7.4-blue](https://img.shields.io/badge/Python-3.7.4-blue)
 
