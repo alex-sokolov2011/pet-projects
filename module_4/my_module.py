@@ -31,7 +31,7 @@ def GridSearchCV_for_LogReg(d_X_train, d_y_train, d_values_for_C):
     # Создадим гиперпараметры
     hyperparameters = dict(C=C, penalty=penalty)
 
-    model = LogisticRegression(multi_class = 'ovr')
+    model = LogisticRegression(multi_class = 'ovr', class_weight='balanced')
     model.fit(d_X_train, d_y_train)
 
     # Создаем сетку поиска с использованием 5-кратной перекрестной проверки
@@ -43,13 +43,14 @@ def GridSearchCV_for_LogReg(d_X_train, d_y_train, d_values_for_C):
     temp_dict = {}
     temp_dict['Penalty'] = [best_model.best_estimator_.get_params()['penalty']]
     temp_dict['C'] = [best_model.best_estimator_.get_params()['C']]
+
     # temp_dict['Признак'] = [best_model.best_index_]
     # temp_list = sorted(clf.cv_results_.keys())
     # temp_dict['Кол-во'] = [len(temp_list)]
     temp_df = pd.DataFrame.from_dict(temp_dict, orient='index', columns=['Лучшие'])
     display(temp_df)
 
-    # temp_dict = {}
+    temp_dict = {}
     # temp_dict['Лучшие признаки'] = temp_list
     # temp_df = pd.DataFrame.from_dict(temp_dict, orient='index')
     # display(temp_df.T)
@@ -227,7 +228,7 @@ def StandardScaler_df_and_filna_0(d_df, d_columns):
     for i  in list(d_df[d_columns].columns):
         d_df[i] = StandardScaler_column(d_df, i)
         if len(d_df[d_df[i].isna()]) < len(d_df):
-            d_df[i] = d_df[i].fillna(0)
+            d_df[i] = d_df[i].fillna(d_df[i].min())
     return
 
 def get_dummies_df(d_df, d_columns):
@@ -279,7 +280,7 @@ def scatterplot_with_hist(d_name_column_x, d_name_column_y, d_df):
 
 
 def four_plot_with_log(d_name_plot,d_df):
-    epsilon = 10**(-7)
+    
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
 
@@ -289,7 +290,7 @@ def four_plot_with_log(d_name_plot,d_df):
     axs[0].set_title(d_name_plot)
     axs[1].boxplot(temp_df)
     axs[1].set_title('')
-    temp_df = d_df.apply(lambda x: math.log(x+epsilon))
+    temp_df = d_df.apply(lambda x: math.log(x+1))
     axs[2].hist(temp_df,bins=11)
     axs[2].set_title('log')
     axs[3].boxplot(temp_df)
@@ -297,7 +298,7 @@ def four_plot_with_log(d_name_plot,d_df):
     return
 
 def four_plot_with_log2(d_name_column,d_df):
-    epsilon = 10**(-7)
+    
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
     
@@ -311,7 +312,7 @@ def four_plot_with_log2(d_name_column,d_df):
     
     temp_name = 'log_'+d_name_column
 
-    temp_df.loc[:,temp_name] =  temp_df[d_name_column].apply(lambda x: math.log(x+epsilon))
+    temp_df.loc[:,temp_name] =  temp_df[d_name_column].apply(lambda x: math.log(x+1))
     plt.subplot2grid((1, 4), (0, 2))
     temp_df[temp_name].hist(bins=11)
 
@@ -332,12 +333,12 @@ def big_hist(d_name_column,d_df):
 
 
 def big_hist_log(d_name_column,d_df):
-    epsilon = 10**(-7)
+    
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
 
     temp_df = d_df.copy()
-    temp_df['log_'+d_name_column] = temp_df[d_name_column].apply(lambda x: math.log(x+epsilon))
+    temp_df['log_'+d_name_column] = temp_df[d_name_column].apply(lambda x: math.log(x+1))
 
     temp_df['log_'+d_name_column].hist(bins=50)
 
@@ -345,9 +346,9 @@ def big_hist_log(d_name_column,d_df):
 
 
 def borders_of_outliers(d_name_column,d_df, log = False):
-    epsilon = 10**(-3)
+    
     if log:
-        temp_df = d_df[d_name_column].apply(lambda x: math.log(x+epsilon))
+        temp_df = d_df[d_name_column].apply(lambda x: math.log(x+1))
     else:
         temp_df = d_df[d_name_column]
     IQR = temp_df.quantile(0.75) - temp_df.quantile(0.25)
@@ -359,7 +360,7 @@ def borders_of_outliers(d_name_column,d_df, log = False):
     temp_dict = {}
     if log:
         temp_dict['границы выбросов с логарифмом'] = [left_border, right_border]
-        temp_dict['границы выбросов без логарифма'] = [math.exp(left_border)-epsilon, math.exp(right_border)-epsilon]
+        temp_dict['границы выбросов без логарифма'] = [math.exp(left_border)-1, math.exp(right_border)-1]
         count_values_left = (temp_df<left_border).sum()
         count_values_right = (temp_df>right_border).sum()
         temp_dict['кол-во значений за границей'] = [count_values_left, count_values_right]
@@ -551,8 +552,8 @@ def simple_boxplot(d_category_names,
     else:
         temp_df = d_df
         if log:
-            epsilon = 10**(-7)
-            temp_df[d_name_column_group_y] = temp_df[d_name_column_group_y].apply(lambda x: math.log(x+epsilon))
+            
+            temp_df[d_name_column_group_y] = temp_df[d_name_column_group_y].apply(lambda x: math.log(x+1))
         
         plt.style.use('seaborn-paper')
         plt.subplots(figsize=(6, 4))
