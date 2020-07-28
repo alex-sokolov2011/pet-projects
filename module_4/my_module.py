@@ -90,13 +90,13 @@ def PR_curve_with_area(d_y_true, d_y_pred_prob, d_my_font_scale):
     precision, recall, thresholds = precision_recall_curve(d_y_true, d_y_pred_prob, pos_label=1)
     prc_auc_score_f = auc(recall, precision)
     plt.plot(precision, recall, lw=3, label='площадь под PR кривой = %0.3f)' % prc_auc_score_f)
-    plt.plot([0, 1], [0, 1], color='grey')
+    
     plt.xlim([-.05, 1.0])
     plt.ylim([-.05, 1.05])
     plt.xlabel('Точность \n Precision = TP/(TP+FP)')
     plt.ylabel('Полнота \n Recall = TP/P')
     plt.title('Precision-Recall кривая')
-    plt.legend(loc="lower right")
+    plt.legend(loc="upper right")
     plt.show()
     return
 
