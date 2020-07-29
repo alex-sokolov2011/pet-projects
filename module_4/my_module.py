@@ -257,8 +257,8 @@ def StandardScaler_df_and_filna_0(d_df, d_columns):
 
 def get_dummies_df(d_df, d_columns):
     star_list_columns = list(d_df.columns)
-    # реализуем метод OneHotLabels через gummies
-    d_df = pd.get_dummies(d_df, columns=d_columns, drop_first=False)
+    # реализуем метод OneHotLabels через get_dummies
+    d_df = pd.get_dummies(d_df, columns=d_columns, drop_first=True)
     # мы специально не удаляем первоначальные столбы, чтобы потом можно было провести построчную проверку перед стандартизацией и моделированием 
     end_list_columns = list(d_df.columns)
     new_dumm_cat_cols = [x for x in end_list_columns if x  not in star_list_columns]
