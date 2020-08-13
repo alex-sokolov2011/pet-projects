@@ -325,23 +325,32 @@ def four_plot_with_log2(d_name_column,d_df):
     
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
+    color_text = plt.get_cmap('PuBu')(0.85)
+
     
     temp_df=d_df.copy()
 
-    plt.subplot2grid((1, 4), (0, 0))
-    temp_df[d_name_column].hist(bins=11)
+    fig = plt.figure()
 
-    plt.subplot2grid((1, 4), (0, 1))
-    temp_df.boxplot([d_name_column])
+   
+    ax_1 = fig.add_subplot(1, 4, 1)
+    ax_2 = fig.add_subplot(1, 4, 2)
+    ax_3 = fig.add_subplot(1, 4, 3)
+    ax_4 = fig.add_subplot(1, 4, 4)
+
+    plt.suptitle(f'Гистограммы и box-plot для признака \'{d_name_column}\' и log({d_name_column})', fontsize=14, color = color_text, y=-0.02)
+
+    ax_1.hist(temp_df[d_name_column],bins=11)
+    ax_1.set_title(f'\'{d_name_column}\'', loc = 'right', fontsize=10, color = color_text)
+    ax_2.boxplot(temp_df[d_name_column])
     
     temp_name = 'log_'+d_name_column
-
     temp_df.loc[:,temp_name] =  temp_df[d_name_column].apply(lambda x: math.log(x+1))
-    plt.subplot2grid((1, 4), (0, 2))
-    temp_df[temp_name].hist(bins=11)
 
-    plt.subplot2grid((1, 4), (0, 3))
-    temp_df.boxplot([temp_name])
+    ax_3.hist(temp_df[temp_name],bins=11)
+    ax_3.set_title(f'log({d_name_column})', loc = 'right', fontsize=10, color = color_text)
+    ax_4.boxplot(temp_df[temp_name])
+
     plt.show()
     return
 
