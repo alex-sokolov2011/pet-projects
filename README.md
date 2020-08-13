@@ -1,4 +1,4 @@
-# Сборник пет-проектов Соколова Александра  
+# Сборник PET-проектов Соколова Александра  
 ## по специализации Data Science  
 ### skillfactory_rds  
 ![https://img.shields.io/badge/Python-3.7.4-blue](https://img.shields.io/badge/Python-3.7.4-blue)
