@@ -56,6 +56,7 @@ missingno==0.4.2
 mistune==0.8.4
 mlxtend==0.17.2
 more-itertools==7.2.0
+mp3play==0.1.15
 mpmath==1.1.0
 multiprocess==0.70.9
 nbconvert==5.6.1
