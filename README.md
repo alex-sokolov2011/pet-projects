@@ -16,9 +16,9 @@
 - **Стэк**: Python (NumPy, Pandas, Matplotlib, Seaborn, Plotly, Scipy, SciKit-Learn, Pandas Profiling, MLextend)  
 - **IDE**: VS Code, PyCharm, Anaconda, Jupyter Notebook  
 - **Cоревнования по программированию и/или обработке данных**: Kaggle ([перейти к профилю sokolovaleks](https://www.kaggle.com/sokolovaleks))  
-- **Системы контроля версий** Git, GitHub (web, desktop) ([перейти к профилю alex-sokolov2011](https://github.com/alex-sokolov2011))  
+- **Системы контроля версий**: Git, GitHub (web, desktop) ([перейти к профилю alex-sokolov2011](https://github.com/alex-sokolov2011))  
 
-и следующие **знания и навыки**:  
+а также удалось сформировать следующие **знания и навыки**:  
 - Обработка данных:  
   - Структуры данных Python  
   - Функции Python  
