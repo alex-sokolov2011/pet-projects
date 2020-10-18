@@ -50,7 +50,7 @@
 - Использование разных библиотек ML = 100  
 - Стаккинг = 70
 - Общее качество кода = 100
-- Командная работа, использование git = 100
+- Командная работа, использование git = 100  
 Ноутбук получил высокую оценку командой курса и участниками Kaggle - ([посмотреть на Kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-p2-model-almira-andrey-sokolov))  
 :arrow_left:[к Модулю 6](https://github.com/alex-sokolov2011/skillfactory_rds/tree/master/module_6)  
 
