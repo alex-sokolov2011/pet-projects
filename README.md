@@ -67,6 +67,16 @@
 - Настройка гиперпараметров = 100  
 Ноутбук получил высокую оценку командой курса и участниками Kaggle - ([посмотреть на Kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-creditscoring-golobokov-sokolov))  
 :arrow_left:[к Модулю 4](https://github.com/alex-sokolov2011/skillfactory_rds/tree/master/module_4)  
+***Результат по модулю 6*** - score MAPE = 9.7602, 10 место на kaggle из 64 команд закрытого соревнования (Топ 16%). оценка командой курса - 80 баллов из 100 (в том числе:  
+- Результат в соревновании = 100  
+- Произведена качественная обработка признаков  = 120  
+- Сгенерированы дополнительные признаки = 70  
+- Использование разных библиотек ML = 100  
+- Стаккинг = 70
+- Общее качество кода = 100
+- Командная работа, использование git = 100
+Ноутбук получил высокую оценку командой курса и участниками Kaggle - ([посмотреть на Kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-p2-model-almira-andrey-sokolov))  
+:arrow_left:[к Модулю 6](https://github.com/alex-sokolov2011/skillfactory_rds/tree/master/module_6)  
 
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/README.md#Оглавление)
 
