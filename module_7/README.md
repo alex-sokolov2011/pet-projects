@@ -82,11 +82,11 @@
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
 
 ### Результаты:  
-- score на kaggle = 0.97423 (13 место, 11%)  
-- предварительные параметры для FT (EfficientNetB3, 320, 32, Custom Head(128, Batch Normalization, , callback(MT,MC_ES_LRS_T), остальные параметры лучше посмотреть в ноутбуке)(val_loss:=, val_acc:=)
-- дообучение на увеличенном размере фото (520, 16) (val_loss:=, val_acc:=)
-- score без TTA - 
-- score c TTA - 
+- score на kaggle = 0.97558 (7 место, Top 6%)  
+- предварительные параметры для FT (EfficientNetB3, 320, 32, Custom Head(128, Batch Normalization, , callback(MT,MC_ES_LRS_T), остальные параметры лучше посмотреть в ноутбуке)
+- дообучение на увеличенном размере фото (520, 16) 
+- score без TTA - 0.97423
+- score c TTA - 0.97558 (+0.13%)
 
 К сожалению не хватило времени, чтобы:
 - вычислить на каких картинках ошибается модель
