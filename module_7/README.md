@@ -95,7 +95,8 @@
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
 
 ### Результаты:  
-- score на kaggle = 0.97558 (7 место, Top 6%)  
+- score на kaggle = 0.97558 (7 место, Top 6%)
+- [ноутбук на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-classification-sokolov)  
 - предварительные параметры для Fine-Tuning (EfficientNetB3, 320, 32, Custom Head(128, Batch Normalization, , callback(MC_ES_LRS_T)). Детально параметры лучше посмотреть в ноутбуке.
 - дообучение на увеличенном размере фото (size=520, batch=**12**) вырастило VAL_ACC на 0.52% с 0.969 до 0.9741 
 - score без TTA - 0.97423
