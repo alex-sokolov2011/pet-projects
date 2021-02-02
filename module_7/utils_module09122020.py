@@ -632,11 +632,6 @@ def model_summary_short(d_model,
 
 
 def model_assembler(d_base_model, d_head):
-    '''
-    Функция производит сборку модели по технике Transfer Learning.
-    За основу берется предобученная сеть, на неё устанавливается новая 
-    "голова" (head) из свежих слоев, которые понадобятся для решения текущей задачи.
-    '''
     d_outputs = d_base_model.output
     
     for l in d_head.layers:
