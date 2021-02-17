@@ -1,14 +1,14 @@
 # Проект 7. Выбираем авто выгодно  
 ## Юнит 8. Нейронные сети  
 ### skillfactory_rds  
-![https://img.shields.io/badge/Python-3.7.4-blue](https://img.shields.io/badge/Python-3.7.4-blue)
+![https://img.shields.io/badge/Python-3.8.5-blue](https://img.shields.io/badge/Python-3.8.5-blue)
 
 ## Оглавление  
 [1. Описание проекта](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Описание-проекта)  
 [2. Какой кейс решаем?](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Какой-кейс-решаем)  
 [3. Краткая информация о данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Краткая-информация-о-данных)  
-[3. Этапы работы над проектом](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Этапы-работы-над-проектом)  
-[4. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Результат)  
+[4. Этапы работы над проектом](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Этапы-работы-над-проектом)  
+[5. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Результат)  
 
 ### Описание проекта  
 Вы работаете в компании, которая занимается продажей автомобилей с пробегом в Москве. В этом модуле вам нужно построить модель классификации изображений. Классифицировать мы будем автомобили по их фотографиям  
