@@ -38,13 +38,13 @@
 
 **Метрика качества**
 Результаты оцениваются по метрике MAPE.  
-MAPE  (Mean Percentage Absolute Error) расшифровывается выражение как средняя абсолютная ошибка в процентах.  
+MAPE  (Mean Absolute Percentage Error) расшифровывается выражение как средняя абсолютная ошибка в процентах.  
 <img src="https://latex.codecogs.com/png.latex?\large&space;MAPE=\frac{1}{n}\sum_{t=1}^{n}\frac{\left&space;|&space;Y_t-\hat{Y_t}&space;\right&space;|}{Y_t}" title="\large MAPE=\frac{1}{n}\sum_{t=1}^{n}\frac{\left | Y_t-\hat{Y_t} \right |}{Y_t}" />
 ,  
 где:  
-- Y_t — фактическое значение за анализируемый период;  
-- Y_t_hat — значение прогнозной модели за анализируемый период;  
-- n — количество периодов.  
+- Y_t — фактическое значение целевого вектора;  
+- Y_t_hat — вектор предсказания целевого значения;  
+- n — количество значений в векторе целевой переменной  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_6/README.md#Оглавление)
 
 ### Краткая информация о данных
