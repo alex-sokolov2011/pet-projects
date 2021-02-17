@@ -1518,12 +1518,20 @@ def four_plot_with_log2(d_name_column,d_df):
     return
 
 
-def big_hist(d_name_column,d_df):
+def big_hist(d_name_column,
+             d_df):
+
+    
+    
     plt.style.use('seaborn-paper')
     plt.rcParams['figure.figsize'] = (12, 3)
+    color_text = plt.get_cmap('PuBu')(0.85)
 
-    temp_df = d_df
+
+    temp_df = d_df.copy()
     temp_df[d_name_column].hist(bins=50)
+    plt.suptitle(f'Гистограмма для признака \'{d_name_column}\'', fontsize=14, color = color_text, y=-0.02)
+
 
     return
 
