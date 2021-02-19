@@ -48,8 +48,8 @@ global last_pred
 
 def auto_eda_cat_col(d_col,
                      d_title_col,
-                     d_df
-                     ):
+                     d_df,
+                     auto_del=True):
     print(f'EDA по категориальному признаку:= {d_col} ({d_title_col})')
     print('===')
     print('Количество уникальных значений (КУЗ)')
@@ -86,8 +86,12 @@ def auto_eda_cat_col(d_col,
             print(f'Кол-во строк критерия {d_title_col}==\'{uz}\' в трейне := {d_len_uz} \
     ({dolya:.2f}% от трейна). {udalit}', end='')
             # print()
-        list_uz_test = list(temp_df_Test[d_col].unique())
-        d_df = d_df[d_df[d_col].isin(list_uz_test)]
+        if auto_del:
+            list_uz_test = list(temp_df_Test[d_col].unique())
+            d_df = d_df[d_df[d_col].isin(list_uz_test)]
+            print('Удаление рекомендованных строк успешно проведено.')
+        else:
+            print('!!!АХТУНГ!!!Установлен флаг о запрете удаления. Удаление рекомендованных строк не проводилось.')
         return d_df
     else:
         print('Различий в списках уникальных значений нет.')
