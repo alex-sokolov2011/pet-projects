@@ -77,8 +77,8 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 ### Результаты:  
 - score на kaggle = 11.15199 (6 место)
 - проект выполнен в двух ноутбуках:
-  - [ноутбук с EDA и препроцессингом табличных данных](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-classification-sokolov). Результатом этого ноутбука является датасет, который используется вторым (основным) ноутбуком.
-  - [основной ноутбук с построением моделей на табличных данных, препроцессингом изображений и Multi-Input нейронной сетью](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-classification-sokolov)  
+  - [ноутбук с EDA и препроцессингом табличных данных](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-price-predic-part2-EDA-sokolov). Результатом этого ноутбука является датасет, который используется вторым (основным) ноутбуком.
+  - [основной ноутбук с построением моделей на табличных данных, препроцессингом изображений и Multi-Input нейронной сетью](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-price-prediction-part2-sokolov)  
 
 
 К сожалению не хватило времени, чтобы:  
