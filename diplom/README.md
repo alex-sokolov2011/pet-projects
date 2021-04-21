@@ -4,11 +4,11 @@
 ![https://img.shields.io/badge/Python-3.8.5-blue](https://img.shields.io/badge/Python-3.8.5-blue)
 
 ## Оглавление  
-[1. Постановка задачи](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Постановка-задачи)  
-[2. Анализ данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Анализ-данных)  
-[3. Применение ML и DL](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Применение-ML-и-DL)  
-[4. Результаты и выводы](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Результаты-и-выводы)  
-[5. Что не успел реализовать](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Что-не-успел-реализовать)  
+[1. Постановка задачи](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Постановка-задачи)  
+[2. Анализ данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Анализ-данных)  
+[3. Применение ML и DL](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Применение-ML-и-DL)  
+[4. Результаты и выводы](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Результаты-и-выводы)  
+[5. Что не успел реализовать](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Что-не-успел-реализовать)  
 
 ## Постановка задачи  
 В качестве задачи использовалась задача 2 [соревнования AlfaBattle2.0](https://boosters.pro/championship/alfabattle2/overview) (январь 2021 года)  
@@ -25,7 +25,7 @@
 - войти в число медалистов соревнования - AUC ROC на привате не ниже 0.7616840  
 - реализовать прототип оптимального по размеру и качеству ML-решения в виде web приложения на heroku  
 - использовать для оценки моделей метрики f1, AUC PRC, а также матрицы ошибок и другие метрики пытаясь максимально приблизить задачу к реальной, так как метрика AUC ROC не совсем состоятельна в задачах по кредитному скоррингу  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Предобработка и анализ данных
 - [описание исходного датасета](https://boosters.pro/championship/alfabattle2_sand/data)  
@@ -42,7 +42,7 @@
 Для удобства воспроизводимости кода решений я создал на платформе kaggle несколько публичных датасетов:
 - [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с исходными данными соревнования и предобработанными данными для бустинга  
 - [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с предобработанными данными для обучения нейронных сетей  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Применение ML и DL
 **ML**  
@@ -57,16 +57,16 @@
 
 ***Дополнительно хотел бы отметить в этом разделе:***
 - в работе была использована библиотека shap не рассматриваемая в курсе, но после ознакомления с которой я считаю, что это из разряда "must know" для DS. Она позволяет интерепретировать результаты предсказаний моделей и как выяснилось в том числе black-box моделей.  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Результаты и выводы  
 - презентация в формате pdf, показывающая навыки владения PP
 - ghgghgh
 - ghgghgh  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Что не успел реализовать  
 
 К сожалению не хватило времени, чтобы:
 - хорошо  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
