@@ -52,21 +52,23 @@
 - сравнение и анализ результатов моделей реализован в [отдельном кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov)
 - [прототип на heroku](https://still-garden-79761.herokuapp.com/)  
 **DL**  
-- ghghggh
-- ghgghgh
+- пользовал GRU и BIGRU
+- препроцессинг реализовал на Google Colab
 
 ***Дополнительно хотел бы отметить в этом разделе:***
 - в работе была использована библиотека shap не рассматриваемая в курсе, но после ознакомления с которой я считаю, что это из разряда "must know" для DS. Она позволяет интерепретировать результаты предсказаний моделей и как выяснилось в том числе black-box моделей.  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Результаты и выводы  
-- презентация в формате pdf, показывающая навыки владения PP
-- ghgghgh
-- ghgghgh  
+- [презентация](https://docs.google.com/presentation/d/1aGGi9Dmx906WIEpWBeBTaQYEbJ1M6tWu9SPZ4AY5tO4/edit?usp=sharing) 
+- [score = 0.7660770](https://boosters.pro/championship/alfabattle2_sand/rating)
+- [прототип]() с интерпретацией прогнозов модели  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Что не успел реализовать  
 
 К сожалению не хватило времени, чтобы:
-- хорошо  
+- Разобраться как применять shap для интерпретации модели обученной на нескольких фолдах
+
+- Попробовать вместо блендинга использовать прогнозы нейросети как отдельные признаки и на них построить модели ML  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
