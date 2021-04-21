@@ -5,7 +5,7 @@
 
 ## Оглавление  
 [1. Постановка задачи](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Постановка-задачи)  
-[2. Анализ данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Анализ-данных)  
+[2. Анализ данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Предобработка-и-анализ-данных)  
 [3. Применение ML и DL](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Применение-ML-и-DL)  
 [4. Результаты и выводы](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Результаты-и-выводы)  
 [5. Что не успел реализовать](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Что-не-успел-реализовать)  
