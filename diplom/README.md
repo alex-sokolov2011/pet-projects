@@ -42,7 +42,7 @@
 **Датасеты с исходными и предобработанными данными:**  
 Для удобства воспроизводимости кода решений я создал на платформе kaggle несколько публичных датасетов:
 - [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с исходными данными соревнования и предобработанными данными для бустинга  
-- [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с предобработанными данными для обучения нейронных сетей  
+- [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox-preproc-for-gru) с предобработанными данными для обучения нейронных сетей (размер предобработаных данных более 55Гб, что в месте в сырыми данными в объеме 25Гб вылилось в необходимость покупки 100Гб на Google Drive)  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Применение ML и DL
