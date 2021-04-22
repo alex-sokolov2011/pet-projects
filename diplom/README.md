@@ -49,7 +49,7 @@
 **ML**  
 - использовал LightGBM и CatBoost (гиперпараметры можно посмотреть в кернелах)
 - предобработка на агрегаты [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov) (на случай если вы не хотите добавлять новые агрегатные функции вы можете переходить к следующему пункту ниже, так как результат препроцессинга был сохранен и используется кернелами ниже)
-- [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov) реализованы обучение моделей и методы отсева фич такие как: Feature Importance, Permutation importance, Target permutation и методы библиотеки shap
+- [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-2-ml-sokolov) реализованы обучение моделей и методы отсева фич такие как: Feature Importance, Permutation importance, Target permutation и методы библиотеки shap
 - сравнение и анализ результатов моделей реализован в [отдельном кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov)
 - [прототип на heroku](https://still-garden-79761.herokuapp.com/)  
 **DL**  
