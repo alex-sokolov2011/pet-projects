@@ -53,7 +53,7 @@
 - сравнение и анализ результатов моделей реализован в [отдельном кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov)
 - [прототип на heroku](https://still-garden-79761.herokuapp.com/)  
 **DL**  
-- пользовал GRU и BIGRU
+- использовал GRU и BIGRU
 - препроцессинг реализовал [на Google Colab](https://colab.research.google.com/drive/1Vifze5j9E53MknDc4TxtMmXP6OhIDNps?usp=sharing)
 
 ***Дополнительно хотел бы отметить в этом разделе:***
