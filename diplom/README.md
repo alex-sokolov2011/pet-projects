@@ -33,7 +33,7 @@
 - [описание исходного датасета](https://boosters.pro/championship/alfabattle2_sand/data)  
 - сводные характеристики данных: 1.5 млн клиентов, 450 млн. транзакций, история транзакций глубиной в год , до 10000 транзакций на клиента, тестовая выборка смещена по времени - обучающая выборка собрана за N дней, тестовая выборка за последующие K дней.
 - размер исходного датасета в заархивированном виде составил 6 Гб. Однако в процессе предобработки данных в агрегационные статистики выяснилось, что размер сырых данных составляет 25 Гб, а препроцессинг для DL (55 Гб) и что локальными ресурсами оперативной памяти (10ГБ) решить данную задачу не получится. Часть предобработки данных была выполненна на ресурсах платформы kaggle, но после того как ресурсов kaggle не хватило для предобработки даты для black-box была использована платформа Google Colab  
-- чтобы не перегружать описание диплома я вынес анализ данных (EDA) в отдельный кернел, где представлен полный анализ в том числе с использованием инструментов визуализации  
+- чтобы не перегружать описание диплома я вынес анализ данных (EDA) в отдельный кернел ([на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov) или на [github](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/sf-dst-10-diplom-1-ml-sokolov.ipynb)), где представлен полный анализ в том числе с использованием инструментов визуализации  
 
 ***Хотелось бы отметить в этом разделе, что предобработка заняла примерно 30-35 %% по времени проекта и даже в какой-то момент казалась невыполнимой, но позволила прокачаться в следующем:***  
 
@@ -44,18 +44,18 @@
 **Датасеты с исходными и предобработанными данными:**  
 Для удобства воспроизводимости кода решений я создал на платформе kaggle несколько публичных датасетов:
 
-- [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с исходными данными соревнования и предобработанными данными для бустинга  
-- [датасет](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox-preproc-for-gru) с предобработанными данными для обучения нейронных сетей (размер предобработаных данных более 55 Гб, что в месте в сырыми данными в объеме 25 Гб вылилось в необходимость покупки 100 Гб на Google Drive)  
+- [датасет на kaggle](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox) с исходными данными соревнования и предобработанными данными для бустинга  
+- [датасет на kaggle](https://www.kaggle.com/sokolovaleks/alfabattle2-sandbox-preproc-for-gru) с предобработанными данными для обучения нейронных сетей (размер предобработаных данных более 55 Гб, что в месте в сырыми данными в объеме 25 Гб вылилось в необходимость покупки 100 Гб на Google Drive)  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/README.md#Оглавление)
 
 ## Применение ML и DL
 **ML**  
 
 - использовал LightGBM и CatBoost (гиперпараметры можно посмотреть в кернелах)
-- предобработка на агрегаты [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov) (на случай если вы не хотите добавлять новые агрегатные функции вы можете переходить к следующему пункту ниже, так как результат препроцессинга был сохранен и используется кернелами ниже)
-- [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-2-ml-sokolov) реализованы обучение LightGBM моделей и методы отсева фич такие как: Feature Importance, Permutation importance, Target permutation и методы библиотеки shap
-- [в этом кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-3-ml-sokolov) реализовано обучение CatBoost модели на GPU
-- сравнение и анализ результатов моделей реализован в [отдельном кернеле](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-1-ml-sokolov)
+- предобработка на агрегаты в этом кернеле ([на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-2-ml-sokolov) или на [github](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/sf-dst-10-diplom-2-ml-sokolov.ipynb)) (на случай если вы не хотите добавлять новые агрегатные функции вы можете переходить к следующему пункту ниже, так как результат препроцессинга был сохранен и используется кернелами ниже)
+- обучение моделей LightGBM реализовано в этом кернеле ([на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-3-ml-sokolov) или на [github](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/sf-dst-10-diplom-3-ml-sokolov.ipynb)). Также в нём использованы методы отсева фич такие как: Feature Importance, Permutation importance, Target permutation и методы библиотеки shap
+- обучение модели CatBoost на GPU реализовано в этом кернеле ([на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-4-ml-sokolov) или на [github](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/sf-dst-10-diplom-4-ml-sokolov.ipynb))
+- сравнение и анализ результатов моделей реализован в отдельном кернеле ([на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-diplom-5-ml-sokolov) или на [github](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/diplom/sf-dst-10-diplom-5-ml-sokolov.ipynb))
 - [прототип на heroku](https://still-garden-79761.herokuapp.com/)  
   
 **DL**  
