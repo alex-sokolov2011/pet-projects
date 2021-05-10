@@ -14,7 +14,7 @@
 
 ### Ссылки на резюме  
 - [резюме на hh.ru](https://hh.ru/resume/771742d4ff073fc5bb0039ed1f7368755a7a74)  
-- [профиль на LinkedIn](https://www.linkedin.com/in/%D1%81%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-05378037/)  
+- [профиль на LinkedIn](https://www.linkedin.com/in/sokaa2011/)  
 
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/README.md#Оглавление)
 
