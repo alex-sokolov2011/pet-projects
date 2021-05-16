@@ -96,7 +96,7 @@ Cпарсил все объявления авто.ру на 9.9.2020 за пр�
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_6/README.md#Оглавление)
 
 ### Результат  
-score на kaggle = 9.7602 (10 место)  
+score на kaggle = 9.7602 (10 место, TOP10)  
 [кернел на kaggle ML](https://www.kaggle.com/sokolovaleks/ml-car-price-prediction)  
 [кернел на kaggle parsing](https://www.kaggle.com/sokolovaleks/parsing-car-price-prediction-part1)  
 К сожалению не хватило времени, чтобы: 
