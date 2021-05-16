@@ -97,7 +97,7 @@ Cпарсил все объявления авто.ру на 9.9.2020 за пр�
 
 ### Результат  
 score на kaggle = 9.7602 (10 место)  
-[кернел на kaggle Ml](https://www.kaggle.com/sokolovaleks/ml-car-price-prediction)  
+[кернел на kaggle ML](https://www.kaggle.com/sokolovaleks/ml-car-price-prediction)  
 [кернел на kaggle parsing](https://www.kaggle.com/sokolovaleks/parsing-car-price-prediction-part1)  
 К сожалению не хватило времени, чтобы: 
 - подобрать еще более оптимальные параметры моделей
