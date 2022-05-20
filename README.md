@@ -13,7 +13,7 @@
 Репозиторий содержит самые значимые и крупные проекты.  
 
 ### Ссылки на резюме  
-- [резюме на hh.ru](https://hh.ru/resume/771742d4ff073fc5bb0039ed1f7368755a7a74)  
+- [резюме]([https://hh.ru/resume/771742d4ff073fc5bb0039ed1f7368755a7a74](https://github.com/alex-sokolov2011/diplomas_and_certificates/blob/main/CV_DataScientist_Sokolov_2022.pdf))  
 - [профиль на LinkedIn](https://www.linkedin.com/in/sokaa2011/)  
 
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/README.md#Оглавление)
