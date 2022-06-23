@@ -65,7 +65,7 @@ score на kaggle = 0.97008 . 29 место из 5000 участников.
 4. [Бейзлайн 3 с CV](https://www.kaggle.com/code/sokolovaleks/linearmodels-openmlcourse-spr22-baseline-3-withcv)
 5. [Бейзлайн 4 с GreadSearch](https://www.kaggle.com/code/sokolovaleks/linearmodels-openmlcourse-spr22-baseline4-gsearch)
 
-Также пособирал из чата разные идеи/вопросы на разбор может пригодятся ([тут](https://docs.google.com/spreadsheets/d/11BzQ4wrKjaS4nXmHoWHw2pyBql2urV3Barirln1cL1M/edit?usp=sharing)). Думал будут добавлять вопросики, но тема как-то не пошла.
+Также пособирал из чата разные идеи/вопросы на разбор может пригодятся ([тут](https://docs.google.com/spreadsheets/d/11BzQ4wrKjaS4nXmHoWHw2pyBql2urV3Barirln1cL1M/edit?usp=sharing)). Думал будут добавлять вопросики, но тема как-то не пошла.  
 Решение не привожу по просьбе организаторов соревнования (если будут вопросы пишите)
 
 К сожалению не хватило времени, чтобы:
