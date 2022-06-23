@@ -37,7 +37,7 @@
 В обучающей выборке train.csv:  
 - site_i – это индексы посещенных сайтов (расшифровка дана в pickle-файле со словарем site_dic.pkl)  
 - time_i – время посещения сайтов site_i  
-- 
+  
 В проверочной выборке есть целевой признак target – факт того, что сессия принадлежит Alice.  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_9/README.md#Оглавление)
 
