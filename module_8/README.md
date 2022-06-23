@@ -74,7 +74,7 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 - использовал ансамблирование градиентного бустинга и нейронной сети - этот метод дал лучший результат  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
-### Результаты:  
+### Результат:  
 - score на kaggle = 11.11494 (5 место)
 - проект выполнен в двух ноутбуках:
   - [ноутбук с EDA и препроцессингом табличных данных](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-price-predic-part2-EDA-sokolov). Результатом этого ноутбука является датасет, который используется вторым (основным) ноутбуком.
