@@ -12,7 +12,7 @@
 | [Parsing + ML/2020](https://github.com/alex-sokolov2011/skillfactory_rds/tree/master/module_6) | Парсинг данных с сайта и ML-модель прогноза рыночной стоимости авто | Спарсить все данные объвлений сайта auto.ru г.Москвы и построить на них модель прогноза рыночной стоимости авто по его характеристикам | requests, json, beautifulsoup, EDA, feature engineering, feature selection methods(correlation matrix, ANOVA F test, Student t-test, feature_importances_RF, noise), sklearn(LinearReg, RandomForest, GradientBoostingReg, ExtraTreeReg, BaggingReg), stacking ensemble, blending |  
 
 Общий стэк для вышеописанных проектов: pandas, numpy, tqdm, pandas-profiling, matplotlib, seaborn.  
-Этот список содержит самые значимые и крупные проекты. В репозитории собраны все проекты.  
+Этот список содержит самые значимые и крупные проекты. В репозитории собраны все проекты (описания проектов доступны внутри каждого).  
 
 ### Ссылки на резюме  
 - [резюме](https://github.com/alex-sokolov2011/diplomas_and_certificates/blob/main/CV_DataScientist_Sokolov_2022.pdf)  
