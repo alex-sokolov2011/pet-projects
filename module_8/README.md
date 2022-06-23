@@ -4,11 +4,11 @@
 ![https://img.shields.io/badge/Python-3.8.5-blue](https://img.shields.io/badge/Python-3.8.5-blue)
 
 ## Оглавление  
-[1. Описание проекта](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Описание-проекта)  
-[2. Какой кейс решаем?](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Какой-кейс-решаем)  
-[3. Краткая информация о данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Краткая-информация-о-данных)  
-[4. Этапы работы над проектом](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Этапы-работы-над-проектом)  
-[5. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Результат)  
+[1. Описание проекта](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Описание-проекта)  
+[2. Какой кейс решаем?](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Какой-кейс-решаем)  
+[3. Краткая информация о данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Краткая-информация-о-данных)  
+[4. Этапы работы над проектом](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Этапы-работы-над-проектом)  
+[5. Результат](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Результат)  
 
 ### Описание проекта  
 За последние несколько месяцев работы в компании «Старый друг», которая занимается продажей автомобилей с пробегом в Москве, вы разработали две модели, которые уже успешно крутятся в продакшне и приносят деньги компании и радость сотрудникам (по словам Анны из отдела продаж).
@@ -23,7 +23,7 @@
 - Добавим текстовые данные (NLP) и сделаем Multi-Input нейронную сеть для анализа и табличных данных, и текста одновременно.
 - Добавим обработку изображений в Multi-Input нейронную сеть.
 - Осуществим ансамблирование градиентного бустинга и нейронной сети (усредним их предсказания).  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
 ### Какой кейс решаем?
 Продолжение соревнования на Прогнозирование стоимости автомобиля, но уже с дополнительными данными.
@@ -51,7 +51,7 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 - Y_t — фактическое значение целевого вектора;  
 - Y_t_hat — вектор предсказания целевого значения;  
 - n — количество значений в векторе целевой переменной  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
 ### Краткая информация о данных
 
@@ -59,7 +59,7 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 - test.csv - тестовый датасет
 - sample_submission.csv - пример правильного формата submission file
 - img.zip - архив базы фотографий авто  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
 ### Этапы работы над проектом  
 
@@ -72,7 +72,7 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 - в конце добавил изображения в Multi-Input нейронную сеть, но это не дало прироста в скор (использовал EfficientNetB3, LR-Cycle) и конечно применял дополнительный метод предобработки изображений - аугментацию.
 - применил метод проброса критерия, но прироста это не дало
 - использовал ансамблирование градиентного бустинга и нейронной сети - этот метод дал лучший результат  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
 ### Результаты:  
 - score на kaggle = 11.11494 (5 место)
@@ -87,6 +87,6 @@ MAPE  (Mean Absolute Percentage Error) расшифровывается выра
 - в ручную собрать тест, чтобы учесть несбалансированные гибриды и электрокары или отдельно обучить на них модели и сделать блендинг
 - составить таблицу с результатами экспериментов как это было в предыдущем проекте
 - перебрать все варианты комбинаций признаков для оптимального набора для catboost  
-:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
+:arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_8/README.md#Оглавление)
 
 Если информация по этому проекту покажется вам интересной или полезной, то я буду очень вам благодарен, если отметите репозиторий и профиль ⭐️⭐️⭐️-дами
