@@ -94,7 +94,7 @@
   - 31.01.21 - созвон и публикация решения на кагл   
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_7/README.md#Оглавление)
 
-### Результаты:  
+### Результат:  
 - score на kaggle = 0.97558 (7 место, Top 6%)
 - [ноутбук на kaggle](https://www.kaggle.com/sokolovaleks/sf-dst-10-car-classification-sokolov)  
 - предварительные параметры для Fine-Tuning (EfficientNetB3, 320, 32, Custom Head(128, Batch Normalization, , callback(MC_ES_LRS_T)). Детально параметры лучше посмотреть в ноутбуке.
