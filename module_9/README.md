@@ -39,7 +39,7 @@
 - time_i – время посещения сайтов site_i  
   
 В проверочной выборке есть целевой признак target – факт того, что сессия принадлежит Alice.  
-Я создал [клон данных на каггл](https://www.kaggle.com/datasets/sokolovaleks/open-ml-course-linear-models-spring22), чтобы участникам удобнее было стартовать на kaggle
+Я создал [клон данных на каггл](https://www.kaggle.com/datasets/sokolovaleks/open-ml-course-linear-models-spring22), чтобы участникам удобнее было стартовать на kaggle  
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_9/README.md#Оглавление)
 
 ### Этапы работы над проектом  
