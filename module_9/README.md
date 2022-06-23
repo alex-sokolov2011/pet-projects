@@ -53,7 +53,7 @@
   
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_9/README.md#Оглавление)
 
-### Результаты:  
+### Результат:  
 score на ods = 0,966855 LB Private (0,972716 LB Public (-0.005 - переобучился)) 11 место на  из 410 участников  
 score на kaggle = 0.97008 . 29 место из 5000 участников.
 
