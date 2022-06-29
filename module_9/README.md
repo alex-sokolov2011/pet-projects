@@ -55,8 +55,8 @@
 :arrow_up:[к оглавлению](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_9/README.md#Оглавление)
 
 ### Результат:  
-score на ods = 0,966855 LB Private (0,972716 LB Public (-0.005 - переобучился)) 11 место на Private из 410 участников  
-score на kaggle = 0.97008 . 29 место из 5000 участников.
+score на ods = 0,966855 [LB Private](https://ods.ai/competitions/alice/leaderboard/private) (0,972716 [LB Public](https://ods.ai/tracks/linear-models-spring22/competitions/alice/leaderboard) (-0.005 - переобучился)) 11 место на Private из 410 участников  
+score на kaggle = 0.97008 . 29 место из 5000 участников. [LB Public](https://www.kaggle.com/competitions/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2/leaderboard)
 
 Из-за моей проф деформации (работал раньше учителем математики старших классов) по ходу сорева подготовил материалы, которые будут полезны для новичков и по согласованию с оргом частями подавал их в чат, чтобы участники сорева могли шаг за шагом продвигаться в решении задачи и повышать скор:
 1. [Домашка + EDA для формирования признаков](https://www.kaggle.com/code/sokolovaleks/linearmodels-openmlcourse-spr22-hw-plus-eda)
