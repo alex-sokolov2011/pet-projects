@@ -3,7 +3,7 @@
 ### Яндекс (Yandex), Школа анализа данных (ШАД), Young&&Yandex  
 ![https://img.shields.io/badge/Python-3.8.5-blue](https://img.shields.io/badge/Python-3.8.5-blue)
 
-## оглавление  
+## Оглавление  
 [1. Описание проекта](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_10/README.md#Описание-проекта)  
 [2. Постановка задачи](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_10/README.md#Постановка-задачи)  
 [3. Краткая информация о данных](https://github.com/alex-sokolov2011/skillfactory_rds/blob/master/module_10/README.md#Краткая-информация-о-данных)  
